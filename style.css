@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fundo: #080b18;
+    --cartao: #11172b;
+    --roxo: #a78bfa;
+    --azul: #67e8f9;
+    --texto: #f1f5f9;
+    --texto-fraco: #a5b0c8;
+    --borda: #293451;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        radial-gradient(ellipse at top, #20204b 0%, transparent 50%),
+        var(--fundo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 1px solid var(--borda);
+}
+
+.subtitulo {
+    color: var(--texto-fraco);
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-top: 5px;
+}
+
+main {
+    width: 90%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 45px 0;
+}
+
+.introducao {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.etiqueta {
+    color: var(--azul);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+h1 span {
+    color: var(--roxo);
+}
+
+.texto-intro {
+    color: var(--texto-fraco);
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+#formulario,
+#resultado {
+    background: rgba(17, 23, 43, 0.94);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.campo {
+    margin-bottom: 22px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.campo input {
+    width: 100%;
+    padding: 13px;
+    border-radius: 8px;
+    border: 1px solid var(--borda);
+    background: #090e20;
+    color: var(--texto);
+    font-size: 15px;
+}
+
+input:focus-visible {
+    outline: 2px solid var(--azul);
+    outline-offset: 2px;
+}
+
+.pergunta {
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid var(--borda);
+}
+
+.pergunta h2 {
+    font-size: 17px;
+    margin-bottom: 16px;
+}
+
+.opcao {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 13px;
+    margin: 9px 0;
+    border: 1px solid var(--borda);
+    border-radius: 9px;
+    cursor: pointer;
+    color: #dbe3f5;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.opcao:hover {
+    border-color: var(--roxo);
+    background: #1a203b;
+}
+
+.opcao input {
+    margin-top: 5px;
+    accent-color: var(--roxo);
+    flex-shrink: 0;
+}
+
+.opcao:has(input:checked) {
+    border-color: var(--roxo);
+    background: #242044;
+}
+
+.botao {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+    background: linear-gradient(100deg, #8b5cf6, #6366f1);
+    border: none;
+    border-radius: 9px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.botao:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+#mensagem {
+    color: #fca5a5;
+    font-size: 14px;
+    margin-top: 18px;
+    text-align: center;
+}
+
+#resultado {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#resultado h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.imagem-perfil {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 20px;
+    border-radius: 16px;
+    border: 2px solid var(--roxo);
+    background: #10152a;
+    overflow: hidden;
+}
+
+.imagem-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#nomeResultado {
+    color: var(--texto-fraco);
+    margin-bottom: 8px;
+}
+
+#perfilNome {
+    font-size: 25px;
+    color: var(--azul);
+}
+
+.categoria {
+    display: inline-block;
+    margin: 12px 0;
+    padding: 5px 14px;
+    border: 1px solid var(--roxo);
+    border-radius: 20px;
+    color: #d8b4fe;
+    font-size: 13px;
+}
+
+#perfilDescricao {
+    color: var(--texto-fraco);
+    max-width: 480px;
+    margin: 8px auto 0;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    border-top: 1px solid var(--borda);
+    color: var(--texto-fraco);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 500px) {
+    header {
+        padding: 22px 15px;
+    }
+
+    main {
+        width: 92%;
+        padding: 30px 0;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .texto-intro {
+        font-size: 14px;
+    }
+
+    #formulario,
+    #resultado {
+        padding: 20px 15px;
+        border-radius: 13px;
+    }
+
+    .pergunta h2 {
+        font-size: 16px;
+    }
+
+    .opcao {
+        font-size: 14px;
+        padding: 12px 10px;
+    }
+
+    .imagem-perfil {
+        width: 170px;
+        height: 170px;
+    }
+
+    #resultado h2 {
+        font-size: 23px;
+    }
+
+    #perfilNome {
+        font-size: 22px;
+    }
+}

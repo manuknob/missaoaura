@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão Aura</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="sketch.js" defer></script>
+</head>
+<body>
+    <header>
+        <p class="subtitulo">MISSÃO ESPACIAL</p>
+    </header>
+
+    <main>
+        <section class="introducao">
+            <p class="etiqueta">RELATÓRIO DE RECRUTAMENTO</p>
+            <h1>Descubra seu <span>perfil</span></h1>
+            <p class="texto-intro">
+                O futuro da humanidade depende de você.
+                Responda às perguntas e descubra qual será sua função
+                na exploração de um planeta desconhecido.
+            </p>
+        </section>
+
+        <form id="formulario">
+            <div class="campo">
+                <label for="nome">Nome do participante</label>
+                <input type="text" id="nome" placeholder="Digite seu nome">
+            </div>
+
+            <div class="campo">
+                <label for="nascimento">Data de nascimento</label>
+                <input type="date" id="nascimento">
+            </div>
+
+            <div class="pergunta">
+                <h2>01. Você encontra uma máquina desconhecida. O que faz?</h2>
+
+                <label class="opcao">
+                    <input type="radio" name="p1" value="construcao">
+                    <span>Examino e tento consertar a máquina.</span>
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p1" value="investigacao">
+                    <span>Pesquiso como ela funciona.</span>
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p1" value="exploracao">
+                    <span>Experimento suas funções.</span>
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p1" value="planejamento">
+                    <span>Organizo uma equipe para analisá-la.</span>
+                </label>
+            </div>
+
+            <div class="pergunta">
+                <h2>02. Qual atividade você prefere?</h2>
+
+                <label class="opcao">
+                    <input type="radio" name="p2" value="construcao">
+                    <span>Criar e montar equipamentos.</span>
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p2" value="investigacao">
+                    <span>Fazer descobertas científicas.</span>
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p2" value="exploracao">
+                    <span>Conhecer lugares novos.</span>
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p2" value="planejamento">
+                    <span>Planejar estratégias e organizar tarefas.</span>
+                </label>
+            </div>
+
+            <div class="pergunta">
+                <h2>03. Durante a missão, surge um problema. Como você reage?</h2>
+
+                <label class="opcao">
+                    <input type="radio" name="p3" value="construcao">
+                    <span>Procuro uma solução prática.</span>
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p3" value="investigacao">
+                    <span>Analiso as evidências antes de agir.</span>
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p3" value="exploracao">
+                    <span>Procuro caminhos e alternativas diferentes.</span>
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p3" value="planejamento">
+                    <span>Organizo a equipe e defino os próximos passos.</span>
+                </label>
+            </div>
+
+            <div class="pergunta">
+                <h2>04. O que seria mais importante para você no novo planeta?</h2>
+
+                <label class="opcao">
+                    <input type="radio" name="p4" value="construcao">
+                    <span>Construir uma base segura.</span>
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p4" value="investigacao">
+                    <span>Descobrir os segredos do planeta.</span>
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p4" value="exploracao">
+                    <span>Explorar o território desconhecido.</span>
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="p4" value="planejamento">
+                    <span>Garantir que a missão seja bem organizada.</span>
+                </label>
+            </div>
+
+            <p id="mensagem" role="alert"></p>
+
+            <button type="submit" class="botao">
+                DESCOBRIR MEU PERFIL ↗
+            </button>
+        </form>
+
+        <section id="resultado" hidden aria-live="polite">
+            <p class="etiqueta">ANÁLISE CONCLUÍDA</p>
+            <h2>Relatório do participante</h2>
+
+            <div class="imagem-perfil" id="imagemPerfil"></div>
+
+            <p id="nomeResultado"></p>
+            <h3 id="perfilNome"></h3>
+            <p class="categoria" id="perfilCategoria"></p>
+            <p id="perfilDescricao"></p>
+
+            <button type="button" id="refazer" class="botao">
+                -refaça-
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>MISSÃO AURA</p>
+    </footer>
+</body>
+</html>
